@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.container {
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start of the container */
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: calc(33.333% - 20px); /* Each card will take up 33.333% minus 20px for margins */
+  margin: 10px; /* 10px margin on all sides */
+  padding: 15px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+.card img {
+  width: 200px;
+  height: auto;
 }
+
+.read-more {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* Modal css*/
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.item-detail h2,
+.item-detail p {
+  margin: 10px 0;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.card-body h5{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
